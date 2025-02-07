@@ -1,0 +1,2 @@
+1.  php artisan backup:script
+    saved in storage/backups

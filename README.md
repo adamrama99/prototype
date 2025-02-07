@@ -62,7 +62,8 @@ Video Reference: [Watch the tutorial on YouTube](https://www.youtube.com/watch?v
        CustomLog "logs/liefs.test-access.log" common
    </VirtualHost>
    ```
-   after all of that restart xampp or restart pc
+   after all of that restart xampp or restart pc then go to localhost/part
+   
 3. Go to `C:\Windows\System32\drivers\etc`.
 4. Edit the `hosts` file and add this line:  
    ```

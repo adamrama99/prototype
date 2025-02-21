@@ -43,11 +43,11 @@
                                 <table id="itemTable" class="table table-condensed">
                                     <thead>
                                         <tr>
-                                            <th style="width: 10px">No.</th>
+                                            <th class="d-none">No.</th>
                                             <th>Tgl</th>
                                             <th>Nama</th>
                                             <th style="width: 10px">Qty</th>
-                                            <th style="width: 10px">Saldo</th>
+                                            <th style="width: 10px">Sisa</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -59,8 +59,8 @@
 
                                         @foreach($items as $item)
                                         <tr class="{{ $item->qty > 0 ? 'positive-row' : 'negative-row' }}">
-                                            <td>{{ $rowNumber-- }}</td>
-                                            <td>{{ date('d/m/Y', strtotime($item->date)) }}</td>
+                                            <td class="d-none">{{ $loop->iteration }}</td>
+                                            <td>{{ date('d/m/y', strtotime($item->date)) }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->qty > 0 ? '+' : '' }}{{ (int) $item->qty }}</td>
                                             <td>{{ $balance += $item->qty }}</td>
